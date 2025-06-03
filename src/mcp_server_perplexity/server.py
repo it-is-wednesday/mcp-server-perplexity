@@ -8,7 +8,7 @@ from mcp.server import NotificationOptions, Server
 from mcp.server.models import InitializationOptions
 
 PERPLEXITY_API_KEY = getenv("PERPLEXITY_API_KEY")
-PERPLEXITY_API_BASE_URL = "https://api.perplexity.ai"
+PERPLEXITY_API_BASE_URL = getenv("PERPLEXITY_API_BASE_URL", "https://api.perplexity.ai")
 
 
 server = Server("mcp-server-perplexity")
